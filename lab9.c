@@ -120,7 +120,7 @@ int main(int argc, char* argv[]) {
     int recordCount = parseData(argv[1], &records);
 
     // size can be changed to increase efficiency by creating more buckets therfore more unique hash values
-    HashType* hashTable = createHashTable(30); 
+    HashType* hashTable = createHashTable(33); // seems to be the most optimal amount of buckets on this input when using the hash function provided
 
     // for each record, insert it into the hash table
     for (int i = 0; i < recordCount; i++) {
